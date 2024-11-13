@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 95vh;
+            width: 95vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .main-container{
+            display: grid;
+            grid-template-columns: 404px;
+            grid-template-rows: 550px 60px;
+        }
+        .image-container{
+            width: 400px;
+        }
+        .button-container{
+            width: 400px;
+            height: 60px;
+            display: grid;
+            grid-template-columns: 196px 196px;
+            grid-template-rows: 56px;
+            column-gap: 8px;
+        }
+        img{
+            border: 2px black solid;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="image-container">
+            <img  id="image" width="400px"  src="https://cdn.discordapp.com/attachments/1157649032332722258/1288158399506153492/IMG_1873.jpg?ex=66f42a7f&is=66f2d8ff&hm=e028e600f15ef03e7d9033fff82d1c0e1cc4f7cdacd4a1e14ade1e042c99a190&" alt="">
+        </div>
+        <div class="button-container">
+            <button class="button" onclick="imgminus()"><-</button>
+            <button class="button" onclick="imgplus()">-></button>
+        </div>
+    </div>
+    <script>
+        let images = ["assets/2024-09-15_200159.png",
+            "assets/2024-09-20_215004.png",
+            "assets/2024-09-20_215010.png",
+            "assets/2024-09-20_215024.png",
+            "assets/photo_2024-11-13_22-32-15.jpg",
+            "assets/photo_2024-11-13_22-33-52.jpg",
+            "assets/photo_2024-11-13_22-33-56.jpg",
+            "assets/photo_2024-11-13_22-33-59.jpg",
+            "assets/photo_2024-11-13_22-34-01.jpg",
+            "assets/photo_2024-11-13_22-42-33.jpg",
+            "assets/photo_2024-11-13_22-42-38.jpg",
+            "assets/photo_2024-11-13_22-42-41.jpg",
+            "assets/photo_2024-11-13_22-42-44.jpg",
+            "assets/photo_2024-11-13_22-42-47.jpg",
+            "assets/photo_2024-11-13_22-42-49.jpg",
+            "assets/photo_2024-11-13_22-42-52.jpg",
+            "assets/photo_2024-11-13_22-42-55.jpg",
+            "assets/Screenshot_527.png",
+            "assets/Zlatanchick_-_Discord_21.09.2024_21_46_14.png",
+            "assets/Zlatanchick_-_Discord_21.09.2024_21_51_17.png",
+            "assets/Zlatanchick_-_Discord_21.09.2024_21_51_30.png",
+            "assets/Снимок экрана 2024-09-11 212343.png",
+            "assets/Снимок экрана 2024-09-15 194354.png",
+            "assets/Снимок экрана 2024-09-15 194414.png",
+            "assets/Снимок экрана 2024-09-15 195034.png",
+            "assets/Снимок экрана 2024-09-15 195103.png",
+            "assets/Снимок экрана 2024-09-20 213525.png",
+            "assets/Снимок экрана 2024-09-20 213702.png",
+            "assets/Снимок экрана 2024-09-20 215004.png",
+            "assets/Снимок экрана 2024-09-20 215010.png",
+            "assets/Снимок экрана 2024-09-20 215024.png",
+            "assets/Снимок экрана 2024-09-20 215505.png",
+            "assets/Снимок экрана 2024-09-20 221021.png",
+            "assets/Снимок экрана 2024-09-23 214316.png",
+            "assets/Снимок экрана 2024-10-01 231039.png",
+            "assets/Снимок экрана 2024-10-01 231132.png",
+            "assets/Снимок экрана 2024-10-01 231139.png",
+            "assets/Снимок экрана 2024-10-01 231147.png",
+        ]
+        var i=0;
+        var image=document.getElementById("image");
+        // Добавте свои картинки через запятую
+        function imgplus() {
+            if(images.length-2 >= i){
+            i++;
+            image.src=images[i];
+            }
+        }
+        function imgminus() {
+            if(i>0){
+            i--;
+            image.src=images[i];
+            }
+        }
+    
+    
+    
+    </script>
+</body>
+</html>
